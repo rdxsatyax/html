@@ -9,9 +9,11 @@ table, th, td{
 }
 
 body{
-    background-color: aqua;
+    background-image: linear-gradient(red,yellow,blue)
 }
+
 #hello{
     text-align: center;
+    
 }
 

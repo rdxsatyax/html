@@ -1,0 +1,17 @@
+ {
+    color: blue;
+}
+h1,h3{
+    color: brown;
+}
+table, th, td{
+    border: 1px solid rgb(121, 179, 35)
+}
+
+body{
+    background-color: aqua;
+}
+#hello{
+    text-align: center;
+}
+

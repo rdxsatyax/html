@@ -1,11 +1,17 @@
- 
+ {
+    color: blue;
+}
+h1,h3{
+    color: brown;
+}
+table, th, td{
+    border: 1px solid rgb(121, 179, 35)
+}
 
 body{
-    background-image: linear-gradient(red,yellow,blue)
-}
-
+    background-color: rgb(23, 91, 112)
+    
+    }
 #hello{
     text-align: center;
-    
 }
-

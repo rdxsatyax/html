@@ -19,4 +19,11 @@ body {
 
 #hello {
     text-align: center;
+
+}
+table{
+  float: right;
+}
+table{
+    flex-direction: row-reverse;
 }

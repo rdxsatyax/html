@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Flipkart Clone (HTML + CSS)</title>
+  <style>
+    /* Reset & basic styles */
+    *{box-sizing:border-box;margin:0;padding:0;font-family:Inter, system-ui, Arial, sans-serif}
+    body{background:#f5f5f7;color:#111}
+    a{text-decoration:none;color:inherit}
+
+    /* Header */
+    .header{background:#2874f0;color:white;padding:12px 24px;display:flex;align-items:center;gap:16px}
+    .logo{display:flex;align-items:center;gap:8px;font-weight:700}
+    .logo .brand{font-size:20px}
+    .search{flex:1;display:flex}
+    .search input{width:100%;padding:10px 12px;border-radius:2px;border:0}
+    .header-actions{display:flex;gap:12px;align-items:center}
+    .btn{background:transparent;border:1px solid rgba(255,255,255,0.2);padding:8px 12px;border-radius:3px;color:white;cursor:pointer}
+
+    /* Top nav (below header) */
+    .topnav{display:flex;gap:12px;padding:8px 24px;background:#fff;border-bottom:1px solid #eee}
+    .topnav a{padding:8px 10px;color:#333;border-radius:4px}
+    .topnav a:hover{background:#f0f0f0}
+
+    /* Layout */
+    .container{max-width:1200px;margin:18px auto;display:grid;grid-template-columns:240px 1fr;gap:18px;padding:0 12px}
+
+    /* Sidebar */
+    .sidebar{background:#fff;padding:12px;border-radius:6px;border:1px solid #eee}
+    .category{font-weight:600;margin-bottom:8px}
+    .cat-list{list-style:none}
+    .cat-list li{padding:8px 6px;border-radius:4px;color:#333}
+    .cat-list li:hover{background:#f7f9ff}
+
+    /* Promotions */
+    .promo{background:linear-gradient(90deg,#ffe082,#fff3e0);padding:12px;border-radius:8px;margin-bottom:12px}
+
+    /* Product grid */
+    .products{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:16px}
+    .card{background:#fff;padding:12px;border-radius:8px;border:1px solid #eee;display:flex;flex-direction:column;gap:8px}
+    .card img{width:100%;height:170px;object-fit:contain;background:#fafafa;border-radius:4px}
+    .card .title{font-size:14px;color:#222;height:40px;overflow:hidden}
+    .price-row{display:flex;align-items:baseline;gap:8px}
+    .price{font-weight:700;font-size:16px}
+    .mrp{color:#777;text-decoration:line-through;font-size:13px}
+    .rating{background:#388e3c;color:white;padding:4px 6px;border-radius:4px;font-size:13px}
+    .add{margin-top:auto}
+    .add button{width:100%;padding:10px;border-radius:6px;background:#2874f0;color:white;border:0;cursor:pointer}
+
+    /* Featured banner */
+    .hero{background:url('https://via.placeholder.com/1100x220/2874f0/fff?text=Big+Offers') center/cover no-repeat;border-radius:10px;height:220px}
+
+    /* Footer */
+    footer{max-width:1200px;margin:18px auto;padding:16px 12px;color:#666}
+
+    /* Responsive */
+    @media (max-width:900px){
+      .container{grid-template-columns:1fr}
+      .sidebar{order:2}
+      .hero{height:160px}
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="logo">
+      <img src="https://via.placeholder.com/36x36/ffffff/2874f0?text=F" alt="logo" style="border-radius:6px" />
+      <div class="brand">Flipkart Clone</div>
+    </div>
+
+    <div class="search">
+      <input type="text" placeholder="Search for products, brands and more" />
+    </div>
+
+    <div class="header-actions">
+      <button class="btn">Login</button>
+      <button class="btn">More</button>
+      <button class="btn">Cart (0)</button>
+    </div>
+  </header>
+
+  <!-- Top navigation -->
+  <nav class="topnav">
+    <a href="#">Electronics</a>
+    <a href="#">Mobiles</a>
+    <a href="#">Fashion</a>
+    <a href="#">Home</a>
+    <a href="#">Appliances</a>
+    <a href="#">Grocery</a>
+  </nav>
+
+  <!-- Main content -->
+  <main class="container">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="promo">
+        <div style="font-weight:700">Special Offer</div>
+        <div style="font-size:13px;color:#444">Upto 50% off across categories</div>
+      </div>
+
+      <div class="category">Categories</div>
+      <ul class="cat-list">
+        <li>Mobiles</li>
+        <li>Electronics</li>
+        <li>Men's Fashion</li>
+        <li>Women's Fashion</li>
+        <li>Home & Kitchen</li>
+        <li>Appliances</li>
+      </ul>
+    </aside>
+
+    <!-- Content column -->
+    <section>
+      <div class="hero"></div>
+
+      <h2 style="margin:14px 0">Top picks for you</h2>
+      <div class="products">
+        <!-- Product card (repeat as needed) -->
+        <article class="card">
+          <img src="https://via.placeholder.com/300x200?text=Product+1" alt="Product 1">
+          <div class="title">Sample Product 1 - Amazing gadget with long name</div>
+          <div class="price-row">
+            <div class="price">₹9,999</div>
+            <div class="mrp">₹12,999</div>
+            <div style="margin-left:auto"><span class="rating">4.3 ★</span></div>
+          </div>
+          <div class="add"><button>Add to cart</button></div>
+        </article>
+
+        <article class="card">
+          <img src="https://via.placeholder.com/300x200?text=Product+2" alt="Product 2">
+          <div class="title">Sample Product 2</div>
+          <div class="price-row">
+            <div class="price">₹1,299</div>
+            <div class="mrp">₹1,899</div>
+            <div style="margin-left:auto"><span class="rating">4.1 ★</span></div>
+          </div>
+          <div class="add"><button>Add to cart</button></div>
+        </article>
+
+        <article class="card">
+          <img src="https://via.placeholder.com/300x200?text=Product+3" alt="Product 3">
+          <div class="title">Sample Product 3</div>
+          <div class="price-row">
+            <div class="price">₹399</div>
+            <div class="mrp">₹599</div>
+            <div style="margin-left:auto"><span class="rating">3.9 ★</span></div>
+          </div>
+          <div class="add"><button>Add to cart</button></div>
+        </article>
+
+        <article class="card">
+          <img src="https://via.placeholder.com/300x200?text=Product+4" alt="Product 4">
+          <div class="title">Sample Product 4</div>
+          <div class="price-row">
+            <div class="price">₹2,199</div>
+            <div class="mrp">₹2,999</div>
+            <div style="margin-left:auto"><span class="rating">4.6 ★</span></div>
+          </div>
+          <div class="add"><button>Add to cart</button></div>
+        </article>
+
+        <!-- Add more cards or duplicate these -->
+
+      </div>
+
+    </section>
+  </main>
+
+  <footer>
+    <div style="max-width:1200px;margin:0 auto;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap">
+      <div>© Flipkart Clone</div>
+      <div>Help · Terms · Privacy</div>
+    </div>
+  </footer>
+</body>
+</html>

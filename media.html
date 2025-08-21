@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>media</title>
+    <style>
+        body{
+            background-color: red;
+        }
+        
+
+        @media only screen and (orientation: landscape) {
+            body {
+                background-color: aqua;
+            }
+        }
+
+        /* @media only screen and (max-width:600px) {
+            .boxes {
+                flex-wrap:wrap;
+            }
+        } */
+
+        .button {
+            margin-left: 500px;
+        }
+        .boxes {
+            display: flex;
+            border: 10px solid yellow;
+            flex-wrap: wrap;
+        }
+
+        .box {
+            height: 300px;
+            width: 300px;
+            margin: 5px;
+            padding: 10px;
+            background: rgb(210, 69, 135);
+        }
+
+        @media only screen and (min-width: 534px) {
+            .boxes {
+                flex-direction: row;
+            }
+
+            .box{
+                background: black;
+            }
+        }
+      @media only screen and (max-width: 634px) {
+            .boxes {
+                flex-direction: column;
+            }
+
+            .box{
+                background: green;
+            
+        
+    </style>
+</head>
+<body>
+    <div class="boxes">
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+
+    </div>
+</body>
+</html>
